@@ -1,5 +1,14 @@
-import React, {useReducer} from "react";
+import React, { useReducer } from "react";
 
+// Дивіться код і опишіть для нього правильні типи.
+interface State{
+  isRequestInProgress: boolean;
+  requestStep: string;
+}
+
+type Action = {
+  type:  'START_REQUEST' |'PENDING_REQUEST'|'FINISH_REQUEST'|'RESET_REQUEST'
+}
 const initialState: State = {
   isRequestInProgress: false,
   requestStep: 'idle',
